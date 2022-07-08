@@ -25,18 +25,24 @@ def calculator():
 
   num1 = float(input("What is the first number?: "))
   run = True
+
   while run: 
     for e in operations:
       print(e)
     perform = input("Type a math operation: ") 
     num2 = float(input("What is the next number?: "))
 
-    calculation = operations[perform]
-    answer = calculation(num1, num2)
+    calculation = operations[perform]   # perform 에 해당하는 Value는 add,subtract, multiply, divide 임
+    answer = calculation(num1, num2)    # 변수를 함수 호출처럼 다루면 바로 함수 호출 됨
 
     print(f"{num1} {perform} {num2} = {answer}")
     print(f"Type 'y' to continue calculating with {answer}, type 'n' to exit or type 'new' for a brand new calculation")
+
+
+    # 계속 연산할 지, 멈출지, 새로 연산을 시작할 지 사용자로 부터 입력 받음
     continue_calc = input("Type y/n/new: ")
+
+    
     if continue_calc == 'y':
       run = True
       num1 = answer
@@ -49,4 +55,7 @@ def calculator():
       print("Invalid response.")
       run = False
       print("\nGoodbye.")
+
+
+
 calculator()

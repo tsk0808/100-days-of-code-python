@@ -14,6 +14,9 @@ class QuizBrain:
         user_answer = input(f"Q.{self.question_number}: {current_question.text} (True/False)")
         self.check_answer(user_answer, current_question.answer)
 
+
+    #   사용자로 부터 빋은 answer , 정답 answer 입력으로 받음
+    
     def check_answer(self, user_answer, correct_answer):
         if user_answer.lower() == correct_answer.lower():
             print("You got it right!")

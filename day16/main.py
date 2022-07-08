@@ -19,6 +19,7 @@ money_machine = MoneyMachine()
 on = True
 while on:
     choice = input(f"What would you like? Choose between espresso, latte or cappuccino: ")
+    
     if choice == 'off':
         print("Have a good one!")
         on = False

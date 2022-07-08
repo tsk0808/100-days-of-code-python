@@ -4,9 +4,13 @@ import random
 is_race_on = False
 screen = Screen()
 screen.setup(width=500, height=400)
+
 user_bet = screen.textinput(title="Make your bet", prompt="Which color turtle will win the race? Enter a color: ").lower
+
 colors = ["red", "orange", "yellow", "green", "blue", "purple"]
+
 y_axis = [-100, -60, -20, 20, 60, 100]
+
 all_turtles = []
 
 for turtle_number in range(0, 6):
